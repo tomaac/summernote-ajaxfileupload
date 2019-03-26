@@ -1,6 +1,15 @@
 # summernote-ajaxfileupload
 Ajax image upload plugin for summernote WYSIWYG editor
 
+<b>Requires</b>
+
+jQuery
+
+Summernote WYSIWYG (doh)
+
+
+
+
 <b>Installation</b>
 
 1) Add stylesheet and js files after summernote ones.
