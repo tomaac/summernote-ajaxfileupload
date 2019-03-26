@@ -5,7 +5,7 @@ Ajax image upload plugin for summernote WYSIWYG editor
 
 jQuery
 
-Summernote WYSIWYG (doh)
+Summernote WYSIWYG (https://github.com/summernote/summernote)
 
 
 
