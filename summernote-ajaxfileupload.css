@@ -1,0 +1,5 @@
+.ajaxfileupload-panel{z-index: 1000; border: solid 1px #999;  }
+#ajaxPanelClose{font-weight: bold;font-size: 30px; transform: rotate(45deg); cursor:pointer; position:absolute; top:0px; right: 10px; }
+#ajaxFileUploadSubmit{padding: 10px 15px; background-color: #232848 ; color: #fff; font-weight: bold; margin-top: 30px; cursor: pointer; max-width: 50%; text-transform:uppercase; text-align:center; display:inline-block; border-radius: 5px; }
+#ajaxFileUploadSubmit:hover{ background-color: #475089; }
+#ajaxFileUploadInner{position:relative; width: 100%; height: 100%; padding: 20px; }
