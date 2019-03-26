@@ -2,8 +2,9 @@
     Created by Tomaac (https://github.com/tomaac)
     2019.
 */
+
 var phpUploadFile = 'fileUpload.php'; // location of the php file that will handle uploads
-var pathToUpoloadedImage = 'https://domain.com/uploads/'; // has to end with /. Add a full path to where the image will be uploaded
+var pathToUpoloadedImage = '//domain.com/uploads/'; // has to end with /. Add a full path to where the image will be uploaded
 // image name itself will be added by the script. 
 
 
