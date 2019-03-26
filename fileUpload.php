@@ -4,8 +4,19 @@
     2019.
 */
 
-// change this to your location where to store uploaded files. It must be full path if on virtual host
-define('UPLOAD_ROOT', '/var/www/vhosts/location/to/your/www/root/uploads/');
+
+
+// change this to your location where to store uploaded files. It must start and end with /, or just / if root directory
+define('UPLOAD_PATH', '/location/to/your/uploads/folder/'); /* EDIT THIS */
+
+
+
+
+
+// makes local root for file uploading and public to send back to javascript
+define('LOCAL_ROOT', $_SERVER['DOCUMENT_ROOT'].UPLOAD_PATH);
+define('PUBLIC_ROOT', '//'.$_SERVER['SERVER_NAME'].UPLOAD_PATH);
+
 
 // set max file size for uploads in bytes. default = ~30Mb
 // this might be limited by php.ini, where default on test servers is 2Mb.
@@ -35,9 +46,9 @@ if(isset($_FILES["file"]["type"])){
 
       $sourcePath = $_FILES['file']['tmp_name'];
       $picture = date('YmdHis').rand(1,9999).'.'.$file_extension; // generates file name from time + random
-      $targetPath = UPLOAD_ROOT.$picture; // sets target path
+      $targetPath = LOCAL_ROOT.$picture; // sets target path
       if(move_uploaded_file($sourcePath,$targetPath)){
-        $resp = $picture; // gives back image name for editor
+        $resp = PUBLIC_ROOT.$picture; // gives back image name for editor
         $resp_mes = 'ok';
       }else{
         //echo 'error pic upload';

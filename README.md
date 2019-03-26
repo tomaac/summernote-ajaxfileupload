@@ -36,12 +36,12 @@ Summernote WYSIWYG (https://github.com/summernote/summernote)
           dialogsInBody: true
         });
 
-3) Edit PHP file to upload files in the right directory for you
+3) Edit 'fileUpload.php' file to upload files in the right directory for you
 
-        define('UPLOAD_ROOT', '/var/www/vhosts/location/to/your/www/root/uploads/');
+        define('UPLOAD_PATH', '/location/to/your/uploads/folder/');
 
-4) (optional) Edit location of PHP upload file in summernote-ext-ajaxfileupload.js, if you need it in different location than js plugin file. Also can adjust path to the folder, where images will be saved. 
+4) (optional) Edit location of PHP upload file in summernote-ext-ajaxfileupload.js, if you need it in different location than js plugin file. 
 
 
        var phpUploadFile = 'fileUpload.php';
-       var pathToUpoloadedImage = '//domain.com/uploads/';
+ 
