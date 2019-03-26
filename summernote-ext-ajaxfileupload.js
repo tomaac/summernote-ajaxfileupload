@@ -3,6 +3,8 @@
     2019.
 */
 var phpUploadFile = 'fileUpload.php'; // location of the php file that will handle uploads
+var pathToUpoloadedImage = 'https://domain.com/uploads/'; // has to end with /. Add a full path to where the image will be uploaded
+// image name itself will be added by the script. 
 
 
 (function(factory) {
@@ -65,7 +67,7 @@ var phpUploadFile = 'fileUpload.php'; // location of the php file that will hand
                        if(data.message=='ok'){
                           // best to add full global path e.g. 'https://domain.com/uploads/'+data.response;
                           // so that it would work in website after adding in admin part for example
-                          uploadedFile = data.response; //full path to uploaded picture.
+                          uploadedFile = pathToUpoloadedImage+data.response; //full path to uploaded picture.
 
                           // add img html in editor
                           context.invoke('editor.pasteHTML', "<img src='"+uploadedFile+"' style='width: 100%; margin: 10px;' alt='uploaded picture' />");
